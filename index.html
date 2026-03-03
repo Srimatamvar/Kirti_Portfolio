@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirti Pathak | Data Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#hero" class="logo">KP</a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#experience" class="nav-link">Extract</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Data Engineer</div>
+                <h1 class="hero-title">Kirti Pathak</h1>
+                <p class="hero-subtitle">Building Scalable ETL Pipelines & Data Solutions</p>
+                <p class="hero-description">
+                    Data Engineer with 1.5+ years of experience at Accenture, specializing in PySpark, SQL, Python, Snowflake, Airflow, and AWS. Designing automated data workflows for Hospitality and Consumer Goods industries.
+                </p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5TB+</span>
+                        <span class="stat-label">Data Processed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">60%</span>
+                        <span class="stat-label">Time Reduced</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">35%</span>
+                        <span class="stat-label">Faster Jobs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Abstract Node-Based Data Flow Diagram -->
+                <svg class="data-flow-diagram" viewBox="0 0 500 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background glow -->
+                    <defs>
+                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#E07A5F;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3D405B;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="nodeGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#F4F1DE" />
+                            <stop offset="100%" style="stop-color:#E8E4C9" />
+                        </linearGradient>
+                        <linearGradient id="nodeGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#E07A5F" />
+                            <stop offset="100%" style="stop-color:#C96B52" />
+                        </linearGradient>
+                        <linearGradient id="nodeGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3D405B" />
+                            <stop offset="100%" style="stop-color:#2D3045" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Connecting Lines (Organic curves) -->
+                    <path class="data-line" d="M80 120 Q150 100 200 180 T280 200" stroke="url(#lineGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+                    <path class="data-line" d="M80 220 Q140 200 200 220 T280 250" stroke="url(#lineGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+                    <path class="data-line" d="M80 320 Q160 300 220 320 T290 300" stroke="url(#lineGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+                    <path class="data-line" d="M280 200 Q340 180 380 220" stroke="url(#lineGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+                    <path class="data-line" d="M290 300 Q340 280 380 320" stroke="url(#lineGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+                    <path class="data-line" d="M280 250 Q330 260 380 280" stroke="url(#lineGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+                    
+                    <!-- Animated dots on lines -->
+                    <circle class="flow-dot" cx="80" cy="120" r="4" fill="#E07A5F">
+                        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle class="flow-dot" cx="80" cy="220" r="4" fill="#E07A5F">
+                        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+                    </circle>
+                    <circle class="flow-dot" cx="80" cy="320" r="4" fill="#E07A5F">
+                        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="1s"/>
+                    </circle>
+                    
+                    <!-- Source Nodes (Left side) -->
+                    <g class="node" filter="url(#glow)">
+                        <circle cx="80" cy="120" r="28" fill="url(#nodeGradient1)" stroke="#E07A5F" stroke-width="2"/>
+                        <text x="80" y="125" text-anchor="middle" font-family="Outfit" font-size="10" font-weight="600" fill="#3D405B">API</text>
+                    </g>
+                    <g class="node" filter="url(#glow)">
+                        <circle cx="80" cy="220" r="28" fill="url(#nodeGradient1)" stroke="#E07A5F" stroke-width="2"/>
+                        <text x="80" y="225" text-anchor="middle" font-family="Outfit" font-size="10" font-weight="600" fill="#3D405B">DB</text>
+                    </g>
+                    <g class="node" filter="url(#glow)">
+                        <circle cx="80" cy="320" r="28" fill="url(#nodeGradient1)" stroke="#E07A5F" stroke-width="2"/>
+                        <text x="80" y="325" text-anchor="middle" font-family="Outfit" font-size="10" font-weight="600" fill="#3D405B">File</text>
+                    </g>
+                    
+                    <!-- ETL Processing Node (Center) -->
+                    <g class="node etl-node" filter="url(#glow)">
+                        <rect x="230" y="180" width="120" height="100" rx="20" fill="url(#nodeGradient2)" stroke="#3D405B" stroke-width="2"/>
+                        <text x="290" y="230" text-anchor="middle" font-family="Outfit" font-size="14" font-weight="700" fill="#F4F1DE">ETL</text>
+                        <text x="290" y="250" text-anchor="middle" font-family="Outfit" font-size="9" font-weight="500" fill="#F4F1DE">PySpark</text>
+                        <text x="290" y="262" text-anchor="middle" font-family="Outfit" font-size="9" font-weight="500" fill="#F4F1DE">Airflow</text>
+                    </g>
+                    
+                    <!-- Output Node (Right side) -->
+                    <g class="node" filter="url(#glow)">
+                        <circle cx="420" cy="220" r="35" fill="url(#nodeGradient3)" stroke="#E07A5F" stroke-width="2"/>
+                        <text x="420" y="215" text-anchor="middle" font-family="Outfit" font-size="11" font-weight="600" fill="#F4F1DE">Snowflake</text>
+                        <text x="420" y="230" text-anchor="middle" font-family="Outfit" font-size="9" font-weight="400" fill="#E07A5F">Warehouse</text>
+                    </g>
+                    <g class="node" filter="url(#glow)">
+                        <circle cx="380" cy="320" r="28" fill="url(#nodeGradient3)" stroke="#81B29A" stroke-width="2"/>
+                        <text x="380" y="325" text-anchor="middle" font-family="Outfit" font-size="10" font-weight="600" fill="#F4F1DE">S3</text>
+                    </g>
+                    <g class="node" filter="url(#glow)">
+                        <circle cx="420" cy="280" r="22" fill="url(#nodeGradient3)" stroke="#81B29A" stroke-width="2"/>
+                        <text x="420" y="285" text-anchor="middle" font-family="Outfit" font-size="9" font-weight="600" fill="#F4F1DE">BI</text>
+                    </g>
+                    
+                    <!-- Decorative elements -->
+                    <circle cx="180" cy="350" r="3" fill="#E07A5F" opacity="0.5"/>
+                    <circle cx="320" cy="100" r="2" fill="#3D405B" opacity="0.4"/>
+                    <circle cx="450" cy="150" r="4" fill="#81B29A" opacity="0.6"/>
+                </svg>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-card clay-card">
+                <div class="about-image">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-text">
+                        I am a Data Engineer with 1.5+ years of experience, associated with Backend and Automation Development at Accenture. I specialize in building scalable ETL pipelines and backend APIs using PySpark, SQL, Python, Snowflake, Airflow, and AWS.
+                    </p>
+                    <p class="about-text">
+                        My work spans across Hospitality and Consumer Goods industries, where I design and automate data workflows, ensuring efficient and reliable data delivery for business insights. I am passionate about leveraging Generative AI technologies and enjoy collaborating with cross-functional teams.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">PySpark</span>
+                        <span class="tag">Snowflake</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Airflow</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-container">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Featured Projects</p>
+            
+            <div class="portfolio-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card clay-card">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="20" width="70" height="60" rx="8" fill="#3D405B"/>
+                            <rect x="20" y="25" width="30" height="15" rx="3" fill="#E07A5F"/>
+                            <rect x="55" y="25" width="25" height="15" rx="3" fill="#81B29A"/>
+                            <rect x="20" y="45" width="60" height="8" rx="2" fill="#F4F1DE" opacity="0.7"/>
+                            <rect x="20" y="58" width="45" height="8" rx="2" fill="#F4F1DE" opacity="0.5"/>
+                            <circle cx="75" cy="68" r="8" fill="#E07A5F"/>
+                            <path d="M72 68L74 70L78 66" stroke="#F4F1DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Marriott Data Migration</h3>
+                    <p class="project-company">Accenture | Data Engineer</p>
+                    <ul class="project-details">
+                        <li>Developed data pipelines for migrating large datasets to Snowflake using PySpark, Airflow, and NiFi</li>
+                        <li>Automated data ingestion and transformation from multiple sources into AWS S3 and Snowflake</li>
+                        <li>Wrote custom scripts in Python and SQL for data cleansing, validation, and schema alignment</li>
+                        <li>Ensured pipeline reliability through DAG orchestration, schema alignment, and automated retries</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>PySpark</span>
+                        <span>Snowflake</span>
+                        <span>Airflow</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card clay-card">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="15" width="80" height="70" rx="10" fill="#3D405B"/>
+                            <rect x="18" y="25" width="35" height="25" rx="4" fill="#E07A5F"/>
+                            <rect x="57" y="25" width="25" height="25" rx="4" fill="#81B29A"/>
+                            <rect x="18" y="55" width="64" height="3" rx="1" fill="#F4F1DE" opacity="0.5"/>
+                            <rect x="18" y="62" width="50" height="3" rx="1" fill="#F4F1DE" opacity="0.3"/>
+                            <circle cx="75" cy="72" r="10" fill="#F4F1DE"/>
+                            <path d="M71 72H79M75 68V76" stroke="#3D405B" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Market Basket Analysis</h3>
+                    <p class="project-company">Power BI, Excel</p>
+                    <ul class="project-details">
+                        <li>Built dashboards to surface product affinities and cross-sell opportunities</li>
+                        <li>Processed and aggregated transaction data using SQL</li>
+                        <li>Designed data model and measures for interactive reporting</li>
+                        <li>Applied scheduled refreshes and data quality checks for weekly business reviews</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card clay-card">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="10" width="60" height="80" rx="8" fill="#3D405B"/>
+                            <rect x="25" y="18" width="50" height="12" rx="3" fill="#E07A5F"/>
+                            <rect x="25" y="35" width="50" height="8" rx="2" fill="#F4F1DE" opacity="0.6"/>
+                            <rect x="25" y="48" width="35" height="8" rx="2" fill="#F4F1DE" opacity="0.4"/>
+                            <rect x="25" y="61" width="40" height="8" rx="2" fill="#F4F1DE" opacity="0.4"/>
+                            <rect x="25" y="74" width="30" height="8" rx="2" fill="#81B29A"/>
+                            <circle cx="68" cy="78" r="6" fill="#F4F1DE"/>
+                            <path d="M66 78L68 80L71 77" stroke="#3D405B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Hospital Management System</h3>
+                    <p class="project-company">Complete Responsive System</p>
+                    <ul class="project-details">
+                        <li>Designed and developed comprehensive Hospital Management System</li>
+                        <li>Streamlined patient records, appointment scheduling, billing, and inventory</li>
+                        <li>Enhanced healthcare operations and improved patient care</li>
+                        <li>Built with modern web technologies for seamless experience</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Full Stack</span>
+                        <span>Responsive</span>
+                        <span>Healthcare</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card clay-card">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="20" width="50" height="60" rx="8" fill="#3D405B"/>
+                            <rect x="30" y="25" width="40" height="50" rx="4" fill="#E07A5F" opacity="0.3"/>
+                            <rect x="35" y="30" width="30" height="35" rx="2" fill="#F4F1DE" opacity="0.8"/>
+                            <path d="M40 45L47 52L60 38" stroke="#3D405B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="65" cy="68" r="12" fill="none" stroke="#81B29A" stroke-width="2"/>
+                            <path d="M58 68H72M65 61V75" stroke="#81B29A" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="project-title">Home Decor AR App</h3>
+                    <p class="project-company">Augmented Reality, Flutter</p>
+                    <ul class="project-details">
+                        <li>Furniture App using Flutter and Augmented Reality</li>
+                        <li>Users can try furniture virtually on smartphones</li>
+                        <li>Customize colors and materials, view in any room</li>
+                        <li>Easy to move and adjust furniture virtually</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>AR</span>
+                        <span>Flutter</span>
+                        <span>Mobile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <h2 class="section-title">Extract</h2>
+            <p class="section-subtitle">Work Experience</p>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content clay-card">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Data Engineer</h3>
+                            <span class="timeline-company">Accenture</span>
+                        </div>
+                        <span class="timeline-date">March 2025 – Present</span>
+                        <ul class="timeline-details">
+                            <li>Designed and implemented end-to-end PySpark ETL pipelines to migrate large datasets (~5 TB) into Snowflake, orchestrated with Apache Airflow</li>
+                            <li>Automated ingestion from multiple sources into AWS S3 and Snowflake using NiFi and Python, reducing manual onboarding by 60%</li>
+                            <li>Built schema migration and validation processes (Python, SQL) to support evolving data models</li>
+                            <li>Optimized PySpark jobs (partitioning, shuffle tuning, memory configs) to reduce job runtime by 35% and cut costs by 25%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content clay-card">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Associate Software Engineer</h3>
+                            <span class="timeline-company">Accenture</span>
+                        </div>
+                        <span class="timeline-date">October 2024 – March 2025</span>
+                        <ul class="timeline-details">
+                            <li>Trained in Oracle SQL, PL/SQL, Apex Cloud Development, Python, and OCI</li>
+                            <li>Assisted in building CI pipelines for ETL unit tests and deployment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content clay-card">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Growth Consultant</h3>
+                            <span class="timeline-company">Shopdeck</span>
+                        </div>
+                        <span class="timeline-date">May 2024 – October 2024</span>
+                        <ul class="timeline-details">
+                            <li>Analyzed customer and transaction data using SQL and Excel</li>
+                            <li>Delivered dashboards and recommendations that increased user engagement by 18%</li>
+                            <li>Built repeatable SQL extracts and automated weekly reporting for stakeholders</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <h2 class="section-title">Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category clay-card">
+                    <h3 class="skill-title">Programming & Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PL/SQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category clay-card">
+                    <h3 class="skill-title">Data Processing & Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PySpark</span>
+                        <span class="skill-tag">AWS S3</span>
+                        <span class="skill-tag">AWS EMR</span>
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">NiFi</span>
+                        <span class="skill-tag">Parquet</span>
+                        <span class="skill-tag">JSON</span>
+                        <span class="skill-tag">Avro</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category clay-card">
+                    <h3 class="skill-title">Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Apache Airflow</span>
+                        <span class="skill-tag">VSCode</span>
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Oracle</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category clay-card">
+                    <h3 class="skill-title">Version Control</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="section-container">
+            <h2 class="section-title">Education & Certificates</h2>
+            
+            <div class="education-grid">
+                <div class="education-card clay-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="education-title">B.E. Computer Science</h3>
+                    <p class="education-school">Atria Institute of Technology</p>
+                    <p class="education-detail">2020 – 2024 | Bangalore, India</p>
+                    <p class="education-grade">8.3 CGPA</p>
+                </div>
+                
+                <div class="certificates-card clay-card">
+                    <h3 class="certificates-title">Certificates</h3>
+                    <ul class="certificates-list">
+                        <li><i class="fas fa-certificate"></i> SnowPro Core Certification - SnowFlake</li>
+                        <li><i class="fas fa-certificate"></i> Microsoft Github CoPilot</li>
+                        <li><i class="fas fa-certificate"></i> Oracle Cloud Infrastructure Foundations Associate</li>
+                        <li><i class="fas fa-certificate"></i> Data Analysis Using AI - Skill Nation</li>
+                        <li><i class="fas fa-certificate"></i> Introduction to Data Science - Infosys</li>
+                        <li><i class="fas fa-certificate"></i> Java Full Stack Certification - EXCELR</li>
+                        <li><i class="fas fa-certificate"></i> Accenture Developer Virtual Experience Program</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Get in Touch</p>
+            
+            <div class="contact-card clay-card">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:kpathak2209@gmail.com">kpathak2209@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:6299715042">+91 6299715042</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Location</span>
+                            <span>Bangalore, Karnataka</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/KP2224" target="_blank">github.com/KP2224</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/KP2224" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:kpathak2209@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Kirti Pathak. All rights reserved.</p>
+            <p>Built with passion for data engineering</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
